@@ -1,0 +1,8 @@
+.social
+  ul
+    mixin social(icon, link)
+      li
+        a(href=link)
+          i(class=icon)
+    +social('fab fa-instagram','#')      
+    +social('fab fa-facebook-f','#')    

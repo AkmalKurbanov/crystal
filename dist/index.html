@@ -320,22 +320,43 @@
         </div>
       </div>
     </div>
+    <footer class="footer">
+      <div class="footer__masterbar">
+        <div class="container">
+          <div class="footer__masterbar-wrap">
+            <div class="footer__masterbar-item">
+              <p><i class="far fa-map-marker-alt"></i>Кыргызская Респеблика, <br>
+                г.Бишкек,пр.Чуй 147/1
+              </p>
+              <div class="social">
+                <ul>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__masterbar-item">
+              <div class="footer__logo"><a href="#"><img src="assets/img/logo-footer.svg"></a></div>
+            </div>
+            <div class="footer__masterbar-item"><a href="mailto:crystallux.kg@gmail.com"><i class="fal-fa-envelope"></i>crystallux.kg@gmail.com</a>
+              <ul>
+                <li><i class="fa fa-phone"></i><a href="tel:+996554110033">+996 (554) 11 00 33</a></li>
+                <li><i class="fab fa-whatsapp"></i><a href="tel:+996504110033">+996 (504) 11 00 33</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="footer__bottom-wrap">
+            <div class="footer__copyright">© 2020 “Crystal Lux”.Все права защищены</div>
+            <div class="queen"><a href="http://queen.kg/" target="_blank"><span></span>
+                <iframe src="https://akmalkurbanov.github.io/copyright_Queen/white.html"></iframe></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
   <script src="assets/scripts.min.js"></script>
-  <script type="text/javascript">
-    var map;
-    
-    DG.then(function () {
-    map = DG.map('map', {
-    center: [42.875923, 74.619700],
-    zoom: 17
-    });
-    var myIcon = L.icon({
-    iconUrl: 'assets/img/mark.png',
-    iconSize: [55, 80],
-    });
-    DG.marker([42.87600, 74.619700],{icon: myIcon}).addTo(map).bindPopup('г.Бишкек,пр.Чуй 147/1');
-    
-    });
-  </script>
 </body>

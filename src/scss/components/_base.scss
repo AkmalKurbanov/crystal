@@ -126,6 +126,10 @@ textarea {
 
       a {
         color: $wc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
 
         &:hover {
           color: $sc;

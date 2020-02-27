@@ -9,14 +9,7 @@ header.header
           i.fal.fa-envelope
           a(href="mailto:crystallux.kg@gmail.com")  crystallux.kg@gmail.com
         .header__top-item
-          .social
-            ul
-              mixin social(icon, link)
-                li
-                  a(href=link)
-                    i(class=icon)
-              +social('fab fa-instagram','#')      
-              +social('fab fa-facebook-f','#')      
+          include ../../includes/social/social  
   .header__masterbar
     .container
       .header__masterbar-wrap
