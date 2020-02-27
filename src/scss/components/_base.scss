@@ -36,10 +36,15 @@ ul {
 }
 
 input,
-button {
+button,
+textarea {
   outline: none;
   border: none;
   background: transparent;
+}
+
+textarea {
+  resize: none;
 }
 
 // // flex footer
@@ -151,8 +156,10 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-     border-radius: rem(9px);
-     padding: rem(11px) rem(17px);
+    border-radius: rem(9px);
+    padding: rem(11px) rem(17px);
+    cursor: pointer;
+    transition: $tr;
   }
 
   &_left {
@@ -166,9 +173,44 @@ button {
   &_right {
     text-align: right;
   }
+
+  &_block {
+    .btn {
+      display: flex;
+      width: 100%;
+      text-transform: uppercase;
+    }
+  }
 }
 
-// // btn end
+// btn end
+
+
+// title
+.title {
+  font-size: rem(40px);
+  margin-bottom: rem(50px);
+  text-transform: uppercase;
+  position: relative;
+  padding-left: rem(12px);
+  color: $bc;
+  font-weight: 400;
+
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: rem(4px);
+    height: 100%;
+    background-color: $mc;
+  }
+}
+
+// title end
+
+.indent {
+  padding: rem(50px) 0;
+}
 
 
 // // title-secondary

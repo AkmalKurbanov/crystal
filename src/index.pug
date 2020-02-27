@@ -9,8 +9,208 @@ block main
     .content 
       include includes/header/header
 
+      //- entry
 
+      .entry
+        .swiper-container.entry-js
+          .swiper-wrapper
+            .swiper-slide(style="background-image:url('assets/img/entry/1.jpg')")
+              .container
+                .entry__wrap
+                  h2.entry__caption
+                    | Химчистка <br> ковров <br> и мягкой мебели
+            .swiper-slide(style="background-image:url('assets/img/entry/2.jpg')")
+              .container
+                .entry__wrap
+                  h2.entry__caption.entry__caption_lighter
+                    | Проффесиональная <br>
+                    span прачечная
+      //- entry end
 
+      //- about
+      .about.indent
+        .container
+          mixin title(title)
+            h2.title=title
+          +title('о нас')  
+          .about__wrap
+            .about__item.desc
+              p  
+                |Компания «Crystal Lux» осуществляет профессиональные услуги чистки ковров и химчистки мягкой мебели, а также стирки пледов и одеял. Мы предлагаем качественный сервис по доступным тарифам. Мы делаем ставку на оперативность исполнения заказов, приемлемые цены и достойный результат.
+              p
+                |Для того чтобы каждый раз обеспечивать высокое качество работ, мы используем специальное оборудование. Каждый этап работы проходит под контролем квалифицированного персонала. Такой ответственный подход к заказам позволяет гарантировать высокое качество услуг.
+              p
+                |Схема работы построена таким образом, чтобы клиенту было максимально удобно. В частности, у нас предусмотрена система оперативной доставки в Бишкеке и жилмассивах. Это позволяет нашим клиентам экономить массу времени.   
+            .about__item.img-wrap
+              mixin aboutImg(img)   
+                .img-wrap__item
+                  img(src=img, alt="")
+              +aboutImg('assets/img/about/1.jpg')
+              +aboutImg('assets/img/about/2.jpg')
+              +aboutImg('assets/img/about/3.jpg')
+              +aboutImg('assets/img/about/4.jpg')
+              +aboutImg('assets/img/about/5.jpg')
+
+      //- about end
+
+      //- services
+      .services.indent
+        .container#container
+          +title('Наши услуги')
+        .services__wrap
+          .services__img
+            img(src="assets/img/services/1.jpg" alt="")
+          .services__desc
+
+            .services__content
+              h2 Профессиональная чистка <br> ковров и ковролинов
+              p Профессиональная стирка ковров – это быстрая и эффективная уборка, результат которой сохраняется надолго. Дышать свежим воздухом и любоваться аккуратным ковролином не только приятно, но и полезно для здоровья.
+                |Вычистим пыль, вымоем грязь, удалим пятна, распрямим примятый ворс, придадим затоптанным покрытиям свежий вид. Новейшие профессиональные технологии химчистки творят чудеса! Чистка ковров позволяет вернуть ковролину яркие краски и сделать его внешний вид безупречным.
+              p В наши услуги входит:
+              ul
+                li Глубинная чистка с удалением впитавшейся пыли, песка, шерсти животных;
+                li Химическая чистка для удаления стойких пятен, потеков, органических веществ;
+                li Пенная чистка для свежести, яркости красок и обновления внешнего вида покрытия;
+                li Стирка и чистка ковров на фабрике с применением профессионального оборудования.
+              .btn-wrap
+                a.btn(href="#") Оставить заявку
+        .services__wrap
+          .services__img
+            img(src="assets/img/services/2.jpg" alt="")
+          .services__desc
+            .services__content
+              h2 Профессиональная химчистка <br> мягкой мебели
+              p Химчистка мягкой мебели еще никогда не была настолько простой, доступной и удобной! Мы профессионально, тщательно и бережно чистим – вы получаете удовольствие от результата. В ваших домашних диванах и матрасах скопилась пыль? Офисные кресла и стулья приобрели непрезентабельный вид? Доверьте нам заботу о любой мягкой мебели!
+              p Химчистка мебели — необходимая, крайне важная и довольно сложная процедура, которая помогает решать сразу несколько задач:
+              p В наши услуги входит:
+              ul
+                li Поддерживать в доме или офисе чистоту и следить за гигиеной;
+                li Ухаживать за покрытиями и продлевать их срок службы;
+                li Обновлять обивку «не первой свежести», придавая ей идеальный свежий вид;
+                li Удалять все виды пятен, следы грязных рук, чернил, пластилина, шоколада.
+              .btn-wrap
+                a.btn(href="#") Оставить заявку
+        .services__wrap
+          .services__img
+            img(src="assets/img/services/3.jpg" alt="")
+          .services__desc
+            .services__content
+              h2 Профессиональная прачечная
+              p Прачечный сервис – «Crystal Lux» — оказывает услуг стирки и химчистки белья корпоративным заказчикам. 
+                | У нас цены на стирку белья радуют доступностью, процесс выполнения работы – минимальными сроками, а результат – высочайшим качеством. 
+                | Так как мы работаем с корпоративными заказчиками, мы понимаем какая ответственность лежит на нас, поэтому даем гарантию на оказываемые услуги.
+              p В наши услуги входит:
+              ul
+                li Поддерживать в доме или офисе чистоту и следить за гигиеной;
+                li Ухаживать за покрытиями и продлевать их срок службы;
+                li Обновлять обивку «не первой свежести», придавая ей идеальный свежий вид;
+                li Удалять все виды пятен, следы грязных рук, чернил, пластилина, шоколада.
+              .btn-wrap
+                a.btn(href="#") Оставить заявку
+      //- services end
+
+      //- advantages
+      .advantages.indent(style="background-image: url('assets/img/advantage/1.jpg');")
+        .container
+          .advantages__wrap
+            .advantages__desc
+              +title('Преимущества')
+              ul.advantages__list
+                mixin advantages(item)
+                  li.advantages__item=item
+                +advantages('Мы гарантируем не только приведение белья, одежды, штор, ковров и т.д. в порядок, но и максимально щадящее отношение к изделию.')
+                +advantages('Недорого и очень быстро мы приведем в порядок абсолютно любые вещи – от постельного белья и штор, до униформы и ковриков.')
+                +advantages('Качество и стабильность работы прачечной обеспечивают профессиональные стиральные агрегаты турецкого бренда Cleanvac.')
+                +advantages('Для стирки белья используется линейка турецких моющих средств.')
+                +advantages('Многолетний опыт работы операторов прачечной позволяет нам гарантировать лучший результат стирки.')
+              .advantages__illustration
+                mixin advIllustration(icon,desc)
+                  .advantages__illustration-item
+                    .advantages__illustration-icon
+                      i(class=icon)
+                    .advantages__illustration-desc!=desc
+                +advIllustration('','Профессиональное <br/> оборудование')
+                +advIllustration('','Справедливые <br/> цены')
+                +advIllustration('','Гарантия <br/> качества')
+                +advIllustration('','Оплата <br/> по факту')
+                +advIllustration('','Безопасная <br/> химия')
+                +advIllustration('','Без выходных')
+      //- advantages end
+
+      //- delivery end
+      .delivery.indent
+        .container
+          +title('Доставка')
+          .delivery__wrap
+            .delivery__item
+              .delivery__desc
+                p Мы создали для Вас невероятно удобный сервис обслуживания. 
+                p У нас есть вывоз и обратная доставка, все заботы и хлопоты мы берем на себя.  Менеджеры по работе с клиентами всегда на рабочем месте!
+                p Просто закажите Crystal Lux на дом или в офис, и машина приедет точно в срок. Это так же просто как заказать такси или доставку пиццы.
+              .btn-wrap
+                a.btn(href="#") Оставить заявку
+            .delivery__item
+              img(src="assets/img/delivery/2.png" alt="")
+      //- delivery end
+
+      //- partners
+      .partners.indent
+        .container
+          +title('Партнеры')
+          .swiper-container.partners-js
+            .swiper-wrapper
+              mixin partners(logo)
+                .swiper-slide
+                  .partners__logo
+                    img(src=logo, alt="")
+              +partners('assets/img/partners/1.png')
+              +partners('assets/img/partners/2.png')
+              +partners('assets/img/partners/3.png')
+              +partners('assets/img/partners/4.png')
+              +partners('assets/img/partners/5.png')
+      //- partners end
+
+      //- reviews
+      .reviews.indent
+        .container
+          +title('отзывы')
+          .swiper-container.reviews-js
+            .swiper-wrapper
+              mixin reviews(img,name,review)
+                .swiper-slide
+                  .reviews__item
+                    .reviews__img
+                      img(src=img, alt="")
+                    .reviews__name=name
+                    .reviews__comment
+                      p=review
+              +reviews('assets/img/reviews/1.jpg','БЕКСУЛТАН САПАРАЛИЕВ','Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.')
+              +reviews('assets/img/reviews/2.jpg','АЛИЯ КАРИМОВА','Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.')
+              +reviews('assets/img/reviews/3.jpg','АТАЙ ШАРИПОВ','Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь.')
+            .swiper-pagination
+      //- reviews end
+
+      //- contacts
+      .contacts.indent
+        .container
+          +title('Контакты')
+        .contacts__wrap   
+          .contacts__form-wrap  
+            .contacts__form
+              .form
+                form(action="")
+                  .form__input
+                    input(type="text" name="Иия" placeholder="Иия")
+                  .form__input
+                    input(type="text" name="Номер телефона" placeholder="Номер телефона")
+                  .form__input.form__input_textarea
+                    textarea(name="Cообщение" placeholder="Ваше сообщение")
+                  .btn-wrap.btn-wrap_block
+                    button.btn(type="submit") Отправить
+          .contacts__map
+              #map
+          .contacts__map-overlay 
+      //- contacts end
 
 
     include includes/footer/footer

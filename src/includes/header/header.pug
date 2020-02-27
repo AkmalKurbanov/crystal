@@ -39,6 +39,20 @@ header.header
         .header__masterbar-item
           .btn-wrap.btn-wrap_right 
             a.btn(href="#") Оставить заявку
+  .header__nav
+    .container
+      nav.nav
+        ul.nav__wrap
+          mixin navItem(item ,link)
+            li.nav__item
+              a.nav__link(href=link)=item
+          +navItem('Главная','#')
+          +navItem('О нас','#')
+          +navItem('Чистка ковров','#')
+          +navItem('Химчистка мебели','#')
+          +navItem('Прачечная','#')
+          +navItem('Контакты','#')
+
 
 
 

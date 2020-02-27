@@ -1,0 +1,79 @@
+.contacts {
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+    padding-top: rem(30px);
+  }
+
+  &__form-wrap {
+    background-color: $bg;
+    border-radius: 0 rem(10px) rem(10px) 0;
+    max-width: 44.1%;
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: rem(30px);
+  }
+
+  .form {
+    padding: rem(40px);
+    box-sizing: border-box;
+
+    &__input {
+      max-width: rem(377px);
+      width: 100%;
+      border-radius: rem(10px);
+      background-color: $wc;
+      display: flex;
+      align-items: center;
+      margin-bottom: rem(20px);
+      box-sizing: border-box;
+
+      &_textarea {
+        padding: rem(15px) rem(20px) rem(20px);
+        margin-bottom: rem(40px);
+        height: rem(165px);
+        align-items: flex-start;
+      }
+
+      input {
+        min-height: rem(45px);
+        padding: 0 rem(20px);
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        height: 100%;
+        color: #666;
+        font-size: rem(14px);
+        font-weight: 400;
+      }
+    }
+  }
+
+  &__map {
+    max-width: 32.62%;
+    width: 100%;
+    border-radius: rem(10px);
+    overflow: hidden;
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__map-overlay {
+    max-width: 50%;
+    width: 100%;
+    min-height: rem(405px);
+    background-color: $mc;
+    border-radius: rem(10px) 0 0 rem(10px);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+}

@@ -44,8 +44,8 @@
   }
 
   &__masterbar {
-    border-bottom: rem(1px) solid $sc;
-    padding: rem(13px) 0 rem(7px);
+    padding: rem(13px) 0 0;
+    margin-bottom: rem(25px);
   }
 
   &__masterbar-wrap {
@@ -78,7 +78,7 @@
 
     p {
       margin-right: rem(85px);
-      padding-left: rem(26px);
+      padding-left: rem(23px);
       position: relative;
       display: flex;
       align-items: center;
@@ -90,7 +90,7 @@
 
     ul {
       li {
-        padding-left: rem(26px);
+        padding-left: rem(23px);
         position: relative;
         display: flex;
         align-items: center;
@@ -105,6 +105,49 @@
           }
         }
       }
+    }
+  }
+
+  .nav {
+    padding-bottom: rem(13px);
+    &__wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__item {
+      border-right: rem(1px) solid $mc;
+
+      a {
+        display: flex;
+
+        &:hover {
+          color: $sc;
+        }
+      }
+
+      &:first-child {
+
+        a {
+          padding-left: 0;
+        }
+      }
+
+      &:last-child {
+        border: none;
+
+        a {
+          padding-right: 0;
+        }
+      }
+
+    }
+
+    &__link {
+      font-size: rem(20px);
+      color: $bc;
+      padding: 0 rem(40px);
     }
   }
 }

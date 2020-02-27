@@ -1,0 +1,21 @@
+.delivery {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &__item {
+    max-width: rem(505px);
+  }
+
+  &__desc {
+    p {
+      line-height: 1.2;
+      margin-bottom: rem(30px);
+      font-size: 20px;
+      color: $bc;
+    }
+  }
+}

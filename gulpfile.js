@@ -90,16 +90,16 @@ gulp.task('js', function () {
          }
       }))
       .pipe(concat('scripts.min.js'))
-      .pipe(babel({
-         presets: [
-            ['env', {
-               loose: true,
-               modules: false,
-               exclude: ['transform-es2015-typeof-symbol']
-            }]
-         ],
-         plugins: ['transform-object-rest-spread']
-      }))
+      // .pipe(babel({
+      //    presets: [
+      //       ['env', {
+      //          loose: true,
+      //          modules: false,
+      //          exclude: ['transform-es2015-typeof-symbol']
+      //       }]
+      //    ],
+      //    plugins: ['transform-object-rest-spread']
+      // }))
       .pipe(uglify())
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('dist/assets'))

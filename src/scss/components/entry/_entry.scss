@@ -1,0 +1,28 @@
+.entry {
+
+  .swiper-slide {
+    min-height: rem(680px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    align-items: center;
+  }
+
+  &__caption {
+    font-size: rem(50px);
+    font-weight: 500;
+    color: $wc;
+    text-transform: uppercase;
+
+    &_lighter {
+      color: $mc;
+
+      span {
+        color: $sc;
+      }
+    }
+  }
+
+
+}
