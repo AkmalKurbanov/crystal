@@ -1,0 +1,8 @@
+@import "mixins/fontface";
+
+
+@include font-face("Monsterat", "../assets/fonts/Montserrat-Regular");
+@include font-face("Monsterat", "../assets/fonts/Montserrat-Medium", 500);
+@include font-face("icon", "../assets/fonts/FLABIOICONFONT");
+
+

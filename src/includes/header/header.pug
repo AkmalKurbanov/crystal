@@ -1,0 +1,45 @@
+header.header
+  .header__top
+    .container
+      .header__top-wrap
+        .header__top-item
+          i.fal.fa-clock
+          p c 9:00 до 20:00 (без выходных и праздников)
+        .header__top-item
+          i.fal.fa-envelope
+          a(href="mailto:crystallux.kg@gmail.com")  crystallux.kg@gmail.com
+        .header__top-item
+          .social
+            ul
+              mixin social(icon, link)
+                li
+                  a(href=link)
+                    i(class=icon)
+              +social('fab fa-instagram','#')      
+              +social('fab fa-facebook-f','#')      
+  .header__masterbar
+    .container
+      .header__masterbar-wrap
+        .header__masterbar-item
+          .header__logo
+            a(href="#")
+              img(src="assets/img/logo-header.svg" alt="")
+        .header__masterbar-item
+          .header__contacts
+            p
+              i.far.fa-map-marker-alt
+              |Кыргызская Респеблика, <br> г.Бишкек,пр.Чуй 147/1
+            ul
+              li
+                i.fal.fa-phone
+                a(href="tel:+996554110033") +996 (554) 11 00 33
+              li
+                i.fab.fa-whatsapp
+                a(href="tel:+996504110033") +996 (504) 11 00 33
+        .header__masterbar-item
+          .btn-wrap.btn-wrap_right 
+            a.btn(href="#") Оставить заявку
+
+
+
+

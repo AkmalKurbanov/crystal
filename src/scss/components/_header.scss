@@ -1,0 +1,110 @@
+.header {
+  &__top {
+    background-color: $mc;
+    padding: rem(10px) 0;
+
+    a,
+    p,
+    i {
+      color: $wc;
+      margin: 0;
+    }
+
+    i {
+      margin-right: rem(20px);
+    }
+
+    a {
+
+      &:hover {
+        color: $sc;
+      }
+    }
+  }
+
+  &__top-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  &__top-item {
+    padding: rem(5px) rem(30px);
+    border-right: rem(1px) solid $wc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &:last-child {
+      border: none;
+      padding-right: 0;
+
+    }
+  }
+
+  &__masterbar {
+    border-bottom: rem(1px) solid $sc;
+    padding: rem(13px) 0 rem(7px);
+  }
+
+  &__masterbar-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  &__logo {
+    max-width: rem(240px);
+    width: 100%;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    * {
+      color: $bc;
+    }
+
+    i {
+      position: absolute;
+      left: 0;
+    }
+
+    p {
+      margin-right: rem(85px);
+      padding-left: rem(26px);
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      i {
+        color: $mc;
+      }
+    }
+
+    ul {
+      li {
+        padding-left: rem(26px);
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        i {
+          color: #2dd248;
+        }
+
+        a {
+          &:hover {
+            color: #2dd248;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  font-family: $monsterat;
+}
+
+
+a,
+i {
+  text-decoration: none;
+  transition: $tr;
+}
+
+
+
+
+img {
+  width: 100%;
+  max-width: 100%;
+
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+input,
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+// // flex footer
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+
+  .content {
+    flex: 1 0 auto;
+  }
+}
+
+
+
+// // flex footer end
+
+// container
+.container {
+  width: 100%;
+  padding-right: rem(15px);
+  padding-left: rem(15px);
+  margin-right: auto;
+  margin-left: auto;
+  max-width: rem(1170px);
+  position: relative;
+  box-sizing: border-box;
+
+  @include lg {
+    max-width: rem(1150px);
+  }
+
+  @include md {
+    max-width: rem(960px);
+  }
+
+  @include sm {
+    max-width: rem(760px);
+  }
+
+  @include xs {
+    max-width: 100%;
+  }
+}
+
+
+// // container end
+
+// // logo
+// .logo {
+
+
+//   a {
+//     display: flex;
+//   }
+
+//   svg,
+//   img {
+//     width: 100%;
+//     max-width: 100%;
+//   }
+// }
+
+// // logo end
+
+// // social
+.social {
+  ul {
+    display: flex;
+    flex-direction: row;
+
+    li {
+      margin-right: rem(30px);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: $wc;
+
+        &:hover {
+          color: $sc;
+
+          i {
+            color: $sc;
+          }
+        }
+
+        i {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// // social end
+
+
+
+// // btn
+.btn-wrap {
+  .btn {
+    color: $wc;
+    background-color: $mc;
+    font-size: rem(20px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+     border-radius: rem(9px);
+     padding: rem(11px) rem(17px);
+  }
+
+  &_left {
+    text-align: left;
+  }
+
+  &_center {
+    text-align: center;
+  }
+
+  &_right {
+    text-align: right;
+  }
+}
+
+// // btn end
+
+
+// // title-secondary
+// .title-secondary {}
+
+// // title-secondary end
+
+// // main title
+// .title-wrap {
+//   text-align: center;
+
+
+//   .title {
+//     &_secondary {}
+
+//     &_main {}
+//   }
+// }
+
+// // main title end
+
+// // popup
+// .popup {}
+
+// .fancybox-content {}
+
+// .fancybox-container {}
+
+// .popup-wrap {
+//   .success {}
+// }
+
+// // popup end
