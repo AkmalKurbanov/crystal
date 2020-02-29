@@ -1,11 +1,11 @@
 nav.nav
   ul.nav__wrap
-    mixin navItem(item ,link)
-      li.nav__item 
+    mixin navItem(item ,link,delay)
+      li.nav__item.wow.fadeInDown(data-wow-duration='0.7s' data-wow-delay=delay) 
         a.nav__link(href=link data-scroll)=item
-    +navItem('Главная','#header')
-    +navItem('О нас','#about')
-    +navItem('Чистка ковров','#carpet')
-    +navItem('Химчистка мебели','#furniture')
-    +navItem('Прачечная','#laundry')
-    +navItem('Контакты','#contacts')
+    +navItem('Главная','#header','0.3s')
+    +navItem('О нас','#about','0.4s')
+    +navItem('Чистка ковров','#carpet','0.5s')
+    +navItem('Химчистка мебели','#furniture','0.6s')
+    +navItem('Прачечная','#laundry','0.7s')
+    +navItem('Контакты','#contacts','0.8s')

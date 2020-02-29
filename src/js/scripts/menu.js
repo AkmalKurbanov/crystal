@@ -28,6 +28,18 @@ jQuery(window).scroll(function () {
     $(".sticky").css('transform', 'translateY(-200%)');
   }
 });
+
+var headerTop = $('.header__to').outerHeight();
+jQuery(window).scroll(function () {
+  var headerTop = jQuery('.header__masterbar').offset().top;
+  if (jQuery(this).scrollTop() > headerTop) {
+    $(".social-float").css('transform', 'translateX(0)');
+
+  } else {
+    $(".social-float").css('transform', 'translateX(-100%)');
+  }
+});
+
 // sticky header end
 
 $('.menu .nav__link').on('click', function () {

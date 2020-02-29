@@ -1,6 +1,6 @@
 
 header.header#header
-  .header__top
+  .header__top.wow.fadeInDown(data-wow-duration='0.7s' data-wow-delay='0.3s')
     .container
       .header__top-wrap
         .header__top-item
@@ -11,11 +11,11 @@ header.header#header
           a(href="mailto:crystallux.kg@gmail.com")  crystallux.kg@gmail.com
         .header__top-item
           include ../../includes/social/social  
-  .header__masterbar
+  .header__masterbar.wow.fadeInUp(data-wow-duration='0.7s' data-wow-delay='0.3s')
     .container
       .header__masterbar-wrap
         .header__masterbar-item
-          .header__logo
+          .header__logo.wow.bounceIn(data-wow-duration='0.7s' data-wow-delay='0.5s')
             a(href="#")
               img(src="assets/img/logo-header.svg" alt="")
         .header__masterbar-item
@@ -29,7 +29,7 @@ header.header#header
                 a(href="tel:+996554110033") +996 (554) 11 00 33
               li
                 i.icon-whatsapp
-                a(href="tel:+996504110033") +996 (504) 11 00 33
+                a(href="https://wa.me/996504110033") +996 (504) 11 00 33
         .header__masterbar-item
           .btn-wrap.btn-wrap_right 
             include ../../includes/btn/btn  

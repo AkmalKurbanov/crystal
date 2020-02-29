@@ -2,6 +2,7 @@ extends layout/main/main
 block title
   | CRYSTAL LUX
 block main  
+  include includes/popup/popup
   include includes/preloader/preloader
   include includes/hamburger/hamburger
   include includes/menu/menu  
@@ -15,6 +16,8 @@ block main
           include includes/nav/nav  
         .btn-wrap
           include includes/btn/btn
+  .social-float
+    include includes/social/social
   .wrapper
     .content 
       include includes/header/header
@@ -40,57 +43,37 @@ block main
       //- about
       .about.indent#about
         .container
-          mixin title(title)
-            h2.title=title
+          include includes/title/title
           +title('о нас')  
           .about__wrap
-            .about__item.desc
-              p  
+            .about__item.desc.wow.bounceIn
+              p.wow.slideInLeft(data-wow-duration='1s' data-wow-delay='0.5s')  
                 |Компания «Crystal Lux» осуществляет профессиональные услуги чистки ковров и химчистки мягкой мебели, а также стирки пледов и одеял. Мы предлагаем качественный сервис по доступным тарифам. Мы делаем ставку на оперативность исполнения заказов, приемлемые цены и достойный результат.
-              p
+              p.wow.slideInLeft(data-wow-duration='1s' data-wow-delay='0.7s')
                 |Для того чтобы каждый раз обеспечивать высокое качество работ, мы используем специальное оборудование. Каждый этап работы проходит под контролем квалифицированного персонала. Такой ответственный подход к заказам позволяет гарантировать высокое качество услуг.
-              p
+              p.wow.slideInLeft(data-wow-duration='1s' data-wow-delay='0.9s')
                 |Схема работы построена таким образом, чтобы клиенту было максимально удобно. В частности, у нас предусмотрена система оперативной доставки в Бишкеке и жилмассивах. Это позволяет нашим клиентам экономить массу времени.   
             .about__item.img-wrap
-              mixin aboutImg(img)   
-                .img-wrap__item
+              mixin aboutImg(img,delay)   
+                .img-wrap__item.wow.bounceIn(data-wow-duration='1s' data-wow-delay=delay)
                   img(src=img, alt="")
-              +aboutImg('assets/img/about/1.jpg')
-              +aboutImg('assets/img/about/2.jpg')
-              +aboutImg('assets/img/about/3.jpg')
-              +aboutImg('assets/img/about/4.jpg')
-              +aboutImg('assets/img/about/5.jpg')
+              +aboutImg('assets/img/about/1.jpg','0.5s')
+              +aboutImg('assets/img/about/2.jpg','0.7s')
+              +aboutImg('assets/img/about/3.jpg','0.9s')
+              +aboutImg('assets/img/about/4.jpg','1s')
+              +aboutImg('assets/img/about/5.jpg','1.2s')
 
       //- about end
 
       //- services
       .services.indent#carpet
-        //- .icon-mail
-        //- .icon-clock
-        //- .icon-location
-        //- .icon-telephone
-        //- .icon-1
-        //- .icon-2
-        //- .icon-3
-        //- .icon-4
-        //- .icon-5
-        //- .icon-6
-        //- .icon-carpet
-        //- .icon-clock-1
-        //- .icon-logo
-        //- .icon-logo11
-        //- .icon-sofa
-        //- .icon-washing-machine
-        //- .icon-facebook
-        //- .icon-instagram
-        //- .icon-whatsapp
         .container#container
           +title('Наши услуги')
         .services__wrap
-          .services__img-wrap
+          .services__img-wrap.wow.bounceInLeft(data-wow-duration='0.7s' data-wow-delay='0.5s')
             .services__img
               img(src="assets/img/services/1.jpg" alt="")
-          .services__desc
+          .services__desc.wow.bounceInRight(data-wow-duration='2s' data-wow-delay='0.5s')
             i.icon-carpet
             .services__content
               h2 Профессиональная чистка <br> ковров и ковролинов
@@ -105,10 +88,10 @@ block main
               .btn-wrap
                 include includes/btn/btn  
         .services__wrap#furniture
-          .services__img-wrap
+          .services__img-wrap.wow.bounceInRight(data-wow-duration='0.7s' data-wow-delay='0.5s')
             .services__img
               img(src="assets/img/services/2.jpg" alt="")
-          .services__desc
+          .services__desc.wow.bounceInLeft(data-wow-duration='2s' data-wow-delay='0.5s')
             i.icon-sofa
             .services__content
               h2 Профессиональная химчистка <br> мягкой мебели
@@ -123,14 +106,14 @@ block main
               .btn-wrap
                 include includes/btn/btn
         .services__wrap#laundry
-          .services__img-wrap
+          .services__img-wrap.wow.bounceInLeft(data-wow-duration='0.7s' data-wow-delay='0.5s')
             .services__img
               img(src="assets/img/services/3.jpg" alt="")
-          .services__desc
+          .services__desc.wow.bounceInRight(data-wow-duration='2s' data-wow-delay='0.5s')
             i.icon-washing-machine
             .services__content
               h2 Профессиональная прачечная
-              <br>
+
               p Прачечный сервис – «Crystal Lux» — оказывает услуг стирки и химчистки белья корпоративным заказчикам. 
                 | У нас цены на стирку белья радуют доступностью, процесс выполнения работы – минимальными сроками, а результат – высочайшим качеством. 
                 | Так как мы работаем с корпоративными заказчиками, мы понимаем какая ответственность лежит на нас, поэтому даем гарантию на оказываемые услуги.
@@ -152,25 +135,25 @@ block main
             .advantages__desc
               +title('Преимущества')
               ul.advantages__list
-                mixin advantages(item)
-                  li.advantages__item=item
-                +advantages('Мы гарантируем не только приведение белья, одежды, штор, ковров и т.д. в порядок, но и максимально щадящее отношение к изделию.')
-                +advantages('Недорого и очень быстро мы приведем в порядок абсолютно любые вещи – от постельного белья и штор, до униформы и ковриков.')
-                +advantages('Качество и стабильность работы прачечной обеспечивают профессиональные стиральные агрегаты турецкого бренда Cleanvac.')
-                +advantages('Для стирки белья используется линейка турецких моющих средств.')
-                +advantages('Многолетний опыт работы операторов прачечной позволяет нам гарантировать лучший результат стирки.')
+                mixin advantages(item,delay)
+                  li.advantages__item.wow.fadeInUp(data-wow-duration='1s' data-wow-delay=delay)=item
+                +advantages('Мы гарантируем не только приведение белья, одежды, штор, ковров и т.д. в порядок, но и максимально щадящее отношение к изделию.','0.5s')
+                +advantages('Недорого и очень быстро мы приведем в порядок абсолютно любые вещи – от постельного белья и штор, до униформы и ковриков.','0.7s')
+                +advantages('Качество и стабильность работы прачечной обеспечивают профессиональные стиральные агрегаты турецкого бренда Cleanvac.','0.9s')
+                +advantages('Для стирки белья используется линейка турецких моющих средств.','1.1s')
+                +advantages('Многолетний опыт работы операторов прачечной позволяет нам гарантировать лучший результат стирки.','1.3s')
               .advantages__illustration
-                mixin advIllustration(icon,desc)
-                  .advantages__illustration-item
+                mixin advIllustration(icon,desc,delay)
+                  .advantages__illustration-item.wow.fadeInUp(data-wow-duration='1s' data-wow-delay=delay)
                     .advantages__illustration-icon
                       i(class=icon)
                     .advantages__illustration-desc!=desc
-                +advIllustration('icon-1','Профессиональное <br/> оборудование')
-                +advIllustration('icon-2','Справедливые <br/> цены')
-                +advIllustration('icon-3','Гарантия <br/> качества')
-                +advIllustration('icon-4','Оплата <br/> по факту')
-                +advIllustration('icon-5','Безопасная <br/> химия')
-                +advIllustration('icon-6','Без выходных')
+                +advIllustration('icon-1','Профессиональное <br/> оборудование','0.5s')
+                +advIllustration('icon-2','Справедливые <br/> цены','0.5s')
+                +advIllustration('icon-3','Гарантия <br/> качества','0.7s')
+                +advIllustration('icon-4','Оплата <br/> по факту','0.7s')
+                +advIllustration('icon-5','Безопасная <br/> химия','0.9s')
+                +advIllustration('icon-6','Без выходных','0.9s')
       //- advantages end
 
       //- delivery end
@@ -180,12 +163,12 @@ block main
           .delivery__wrap
             .delivery__item
               .delivery__desc
-                p Мы создали для Вас невероятно удобный сервис обслуживания. 
-                p У нас есть вывоз и обратная доставка, все заботы и хлопоты мы берем на себя.  Менеджеры по работе с клиентами всегда на рабочем месте!
-                p Просто закажите Crystal Lux на дом или в офис, и машина приедет точно в срок. Это так же просто как заказать такси или доставку пиццы.
+                p.wow.bounceInLeft(data-wow-duration='0.7s' data-wow-delay='0.5s') Мы создали для Вас невероятно удобный сервис обслуживания. 
+                p.wow.bounceInLeft(data-wow-duration='0.7s' data-wow-delay='0.7s') У нас есть вывоз и обратная доставка, все заботы и хлопоты мы берем на себя.  Менеджеры по работе с клиентами всегда на рабочем месте!
+                p.wow.bounceInLeft(data-wow-duration='0.7s' data-wow-delay='0.9s') Просто закажите Crystal Lux на дом или в офис, и машина приедет точно в срок. Это так же просто как заказать такси или доставку пиццы.
               .btn-wrap
                 includes/btn/btn
-            .delivery__item
+            .delivery__item.wow.bounceInRight(data-wow-duration='0.7s' data-wow-delay='0.5s')
               img(src="assets/img/delivery/2.png" alt="")
       //- delivery end
 
@@ -231,24 +214,29 @@ block main
         .container
           +title('Контакты')
         .contacts__wrap   
-          .contacts__form-wrap  
+          .contacts__form-wrap.wow.bounceInLeft(data-wow-duration='0.7s' data-wow-delay='0.5s')  
             .contacts__form
               .form
                 form(action="")
-                  .form__input
-                    input(type="text" name="Иия" placeholder="Иия")
-                  .form__input
+                
+                  input(type="hidden" name="project_name" value="Site Name")
+                  input(type="hidden" name="admin_email" value="250296a@gmail.com")
+                  input(type="hidden" name="form_subject" value="Form Subject")
+
+                  .form__input.wow.fadeInUp(data-wow-duration='0.7s' data-wow-delay='1.8s')
+                    input(type="text" name="Имя" placeholder="Имя")
+                  .form__input.wow.fadeInUp(data-wow-duration='0.7s' data-wow-delay='1.5s')
                     input.phone-js(type="text" name="Номер телефона" placeholder="Номер телефона")
-                  .form__input.form__input_textarea
+                  .form__input.form__input_textarea.wow.fadeInUp(data-wow-duration='0.7s' data-wow-delay='1.3s')
                     textarea(name="Cообщение" placeholder="Ваше сообщение")
-                  .btn-wrap.btn-wrap_block
+                  .btn-wrap.btn-wrap_block.wow.fadeInUp(data-wow-duration='0.7s' data-wow-delay='1.1s')
                     .btn
                       span.btn__circle
                       button.btn__inner(type="submit")
                         span.btn__container Отправить
-          .contacts__map
+          .contacts__map.wow.bounceInRight(data-wow-duration='0.7s' data-wow-delay='0.7s')
             #map
-          .contacts__map-overlay 
+          .contacts__map-overlay.wow.bounceInRight(data-wow-duration='0.7s' data-wow-delay='0.9s')
       //- contacts end
 
 

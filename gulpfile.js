@@ -78,7 +78,7 @@ gulp.task('js', function () {
          'node_modules/swiper/js/swiper.min.js',
          'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
          'node_modules/inputmask/dist/jquery.inputmask.min.js',
-         // 'node_modules/wowjs/dist/wow.min.js',
+         'node_modules/wowjs/dist/wow.min.js',
          'src/js/scripts/*.js'
       ])
       .pipe(plumber({

@@ -15,10 +15,10 @@ $(".phone-js").inputmask({
 
 
 
-
+// btn effect
 $(".btn__inner").mouseenter(function (e) {
   var parentOffset = $(this).offset();
-
+  
   var relX = e.pageX - parentOffset.left;
   var relY = e.pageY - parentOffset.top;
   $(this).prev(".btn__circle").css({
@@ -27,13 +27,13 @@ $(".btn__inner").mouseenter(function (e) {
   });
   $(this).prev(".btn__circle").removeClass("desplode-circle");
   $(this).prev(".btn__circle").addClass("explode-circle");
-
+  
 });
 
 $(".btn__inner").mouseleave(function (e) {
-
+  
   var parentOffset = $(this).offset();
-
+  
   var relX = e.pageX - parentOffset.left;
   var relY = e.pageY - parentOffset.top;
   $(this).prev(".btn__circle").css({
@@ -42,50 +42,51 @@ $(".btn__inner").mouseleave(function (e) {
   });
   $(this).prev(".btn__circle").removeClass("explode-circle");
   $(this).prev(".btn__circle").addClass("desplode-circle");
-
+  
 });
+// btn effect end
 
 
 
 
-// // animation
-// if ($(window).width() > 575) {
-//   var wow = new WOW({
-//     boxClass: 'wow',
-//     animateClass: 'animated',
-//     offset: 0,
-//     mobile: false,
-//     live: true,
-//     callback: function (box) {
+// animation
+if ($(window).width() > 575) {
+  var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 0,
+    mobile: false,
+    live: true,
+    callback: function (box) {
 
-//     },
-//     scrollContainer: null
-//   });
-//   wow.init();
-// }
+    },
+    scrollContainer: null
+  });
+  wow.init();
+}
 
-// // animation end
+// animation end
+
+
 
 // thanks message
 
-
-
 //E-mail Ajax Send
-// $('form').submit(function () {
-//   var th = $(this);
-//   $.ajax({
-//     type: 'POST',
-//     url: 'mail.php',
-//     data: th.serialize()
-//   }).done(function () {
-//     $('.popup-wrap').fadeIn();
-//     $('body').addClass('body-scroll');
-//   });
-//   return false;
-// });
+$('form').submit(function () {
+  var th = $(this);
+  $.ajax({
+    type: 'POST',
+    url: 'mail.php',
+    data: th.serialize()
+  }).done(function () {
+    $('.popup-wrap').css('display', 'flex');
+    $('body').addClass('body-scroll');
+  });
+  return false;
+});
 // // thanks message end
 
-// $('.popup-wrap').on('click', function () {
-//   $('body').removeClass('body-scroll');
-//   $(this).hide();
-// });
+$('.popup-wrap').on('click', function () {
+  $('body').removeClass('body-scroll');
+  $(this).hide();
+});

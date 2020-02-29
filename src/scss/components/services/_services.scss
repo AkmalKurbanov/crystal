@@ -44,8 +44,6 @@
           left: 0;
           font-size: rem(270px);
           opacity: 0.1;
-          top: 50%;
-          transform: translateY(-50%);
         }
 
       }
@@ -110,6 +108,7 @@
     overflow: hidden;
     z-index: 1;
     display: flex;
+    align-items: center;
     position: absolute;
     top: 0;
 
