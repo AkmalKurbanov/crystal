@@ -2,9 +2,19 @@ extends layout/main/main
 block title
   | CRYSTAL LUX
 block main  
-  include includes/hamburger/hamburger
   include includes/preloader/preloader
-
+  include includes/hamburger/hamburger
+  include includes/menu/menu  
+  .sticky-header.header.sticky
+    .sticky__top
+      .sticky__top-wrap
+        .sticky__logo
+          a(href="#header" data-scroll)
+            img(src="assets/img/logo-header.svg" alt="")
+        .sticky__nav
+          include includes/nav/nav  
+        .btn-wrap
+          include includes/btn/btn
   .wrapper
     .content 
       include includes/header/header
@@ -28,7 +38,7 @@ block main
       //- entry end
 
       //- about
-      .about.indent
+      .about.indent#about
         .container
           mixin title(title)
             h2.title=title
@@ -54,14 +64,34 @@ block main
       //- about end
 
       //- services
-      .services.indent
+      .services.indent#carpet
+        //- .icon-mail
+        //- .icon-clock
+        //- .icon-location
+        //- .icon-telephone
+        //- .icon-1
+        //- .icon-2
+        //- .icon-3
+        //- .icon-4
+        //- .icon-5
+        //- .icon-6
+        //- .icon-carpet
+        //- .icon-clock-1
+        //- .icon-logo
+        //- .icon-logo11
+        //- .icon-sofa
+        //- .icon-washing-machine
+        //- .icon-facebook
+        //- .icon-instagram
+        //- .icon-whatsapp
         .container#container
           +title('Наши услуги')
         .services__wrap
-          .services__img
-            img(src="assets/img/services/1.jpg" alt="")
+          .services__img-wrap
+            .services__img
+              img(src="assets/img/services/1.jpg" alt="")
           .services__desc
-
+            i.icon-carpet
             .services__content
               h2 Профессиональная чистка <br> ковров и ковролинов
               p Профессиональная стирка ковров – это быстрая и эффективная уборка, результат которой сохраняется надолго. Дышать свежим воздухом и любоваться аккуратным ковролином не только приятно, но и полезно для здоровья.
@@ -73,11 +103,13 @@ block main
                 li Пенная чистка для свежести, яркости красок и обновления внешнего вида покрытия;
                 li Стирка и чистка ковров на фабрике с применением профессионального оборудования.
               .btn-wrap
-                a.btn(href="#") Оставить заявку
-        .services__wrap
-          .services__img
-            img(src="assets/img/services/2.jpg" alt="")
+                include includes/btn/btn  
+        .services__wrap#furniture
+          .services__img-wrap
+            .services__img
+              img(src="assets/img/services/2.jpg" alt="")
           .services__desc
+            i.icon-sofa
             .services__content
               h2 Профессиональная химчистка <br> мягкой мебели
               p Химчистка мягкой мебели еще никогда не была настолько простой, доступной и удобной! Мы профессионально, тщательно и бережно чистим – вы получаете удовольствие от результата. В ваших домашних диванах и матрасах скопилась пыль? Офисные кресла и стулья приобрели непрезентабельный вид? Доверьте нам заботу о любой мягкой мебели!
@@ -89,28 +121,32 @@ block main
                 li Обновлять обивку «не первой свежести», придавая ей идеальный свежий вид;
                 li Удалять все виды пятен, следы грязных рук, чернил, пластилина, шоколада.
               .btn-wrap
-                a.btn(href="#") Оставить заявку
-        .services__wrap
-          .services__img
-            img(src="assets/img/services/3.jpg" alt="")
+                include includes/btn/btn
+        .services__wrap#laundry
+          .services__img-wrap
+            .services__img
+              img(src="assets/img/services/3.jpg" alt="")
           .services__desc
+            i.icon-washing-machine
             .services__content
               h2 Профессиональная прачечная
+              <br>
               p Прачечный сервис – «Crystal Lux» — оказывает услуг стирки и химчистки белья корпоративным заказчикам. 
                 | У нас цены на стирку белья радуют доступностью, процесс выполнения работы – минимальными сроками, а результат – высочайшим качеством. 
                 | Так как мы работаем с корпоративными заказчиками, мы понимаем какая ответственность лежит на нас, поэтому даем гарантию на оказываемые услуги.
               p В наши услуги входит:
               ul
-                li Поддерживать в доме или офисе чистоту и следить за гигиеной;
-                li Ухаживать за покрытиями и продлевать их срок службы;
-                li Обновлять обивку «не первой свежести», придавая ей идеальный свежий вид;
-                li Удалять все виды пятен, следы грязных рук, чернил, пластилина, шоколада.
+                li Стирка и сушка белья;
+                li Глажка;
+                li Стирка для отелей и ресторанов;
+                li Стирка пледов и одеял.
               .btn-wrap
-                a.btn(href="#") Оставить заявку
+                include includes/btn/btn
       //- services end
 
       //- advantages
-      .advantages.indent(style="background-image: url('assets/img/advantage/1.jpg');")
+      .advantages.indent
+        span(style="background-image: url('assets/img/advantage/1.jpg');")
         .container
           .advantages__wrap
             .advantages__desc
@@ -129,16 +165,16 @@ block main
                     .advantages__illustration-icon
                       i(class=icon)
                     .advantages__illustration-desc!=desc
-                +advIllustration('','Профессиональное <br/> оборудование')
-                +advIllustration('','Справедливые <br/> цены')
-                +advIllustration('','Гарантия <br/> качества')
-                +advIllustration('','Оплата <br/> по факту')
-                +advIllustration('','Безопасная <br/> химия')
-                +advIllustration('','Без выходных')
+                +advIllustration('icon-1','Профессиональное <br/> оборудование')
+                +advIllustration('icon-2','Справедливые <br/> цены')
+                +advIllustration('icon-3','Гарантия <br/> качества')
+                +advIllustration('icon-4','Оплата <br/> по факту')
+                +advIllustration('icon-5','Безопасная <br/> химия')
+                +advIllustration('icon-6','Без выходных')
       //- advantages end
 
       //- delivery end
-      .delivery.indent
+      .delivery.indent(style="background-image: url('assets/img/delivery/1.jpg');")
         .container
           +title('Доставка')
           .delivery__wrap
@@ -148,7 +184,7 @@ block main
                 p У нас есть вывоз и обратная доставка, все заботы и хлопоты мы берем на себя.  Менеджеры по работе с клиентами всегда на рабочем месте!
                 p Просто закажите Crystal Lux на дом или в офис, и машина приедет точно в срок. Это так же просто как заказать такси или доставку пиццы.
               .btn-wrap
-                a.btn(href="#") Оставить заявку
+                includes/btn/btn
             .delivery__item
               img(src="assets/img/delivery/2.png" alt="")
       //- delivery end
@@ -191,7 +227,7 @@ block main
       //- reviews end
 
       //- contacts
-      .contacts.indent
+      .contacts.indent#contacts
         .container
           +title('Контакты')
         .contacts__wrap   
@@ -202,15 +238,19 @@ block main
                   .form__input
                     input(type="text" name="Иия" placeholder="Иия")
                   .form__input
-                    input(type="text" name="Номер телефона" placeholder="Номер телефона")
+                    input.phone-js(type="text" name="Номер телефона" placeholder="Номер телефона")
                   .form__input.form__input_textarea
                     textarea(name="Cообщение" placeholder="Ваше сообщение")
                   .btn-wrap.btn-wrap_block
-                    button.btn(type="submit") Отправить
+                    .btn
+                      span.btn__circle
+                      button.btn__inner(type="submit")
+                        span.btn__container Отправить
           .contacts__map
-              #map
+            #map
           .contacts__map-overlay 
       //- contacts end
+
 
 
     include includes/footer/footer

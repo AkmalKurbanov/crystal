@@ -1,12 +1,13 @@
-header.header
+
+header.header#header
   .header__top
     .container
       .header__top-wrap
         .header__top-item
-          i.fal.fa-clock
+          i.icon-clock
           p c 9:00 до 20:00 (без выходных и праздников)
         .header__top-item
-          i.fal.fa-envelope
+          i.icon-mail
           a(href="mailto:crystallux.kg@gmail.com")  crystallux.kg@gmail.com
         .header__top-item
           include ../../includes/social/social  
@@ -20,31 +21,23 @@ header.header
         .header__masterbar-item
           .header__contacts
             p
-              i.far.fa-map-marker-alt
-              |Кыргызская Респеблика, <br> г.Бишкек,пр.Чуй 147/1
+              i.icon-location
+              |Кыргызская Республика, <br> г.Бишкек,пр.Чуй 147/1
             ul
               li
-                i.fal.fa-phone
+                i.icon-telephone
                 a(href="tel:+996554110033") +996 (554) 11 00 33
               li
-                i.fab.fa-whatsapp
+                i.icon-whatsapp
                 a(href="tel:+996504110033") +996 (504) 11 00 33
         .header__masterbar-item
           .btn-wrap.btn-wrap_right 
-            a.btn(href="#") Оставить заявку
+            include ../../includes/btn/btn  
+            //- a.btn(href="#") Оставить заявку
   .header__nav
     .container
-      nav.nav
-        ul.nav__wrap
-          mixin navItem(item ,link)
-            li.nav__item
-              a.nav__link(href=link)=item
-          +navItem('Главная','#')
-          +navItem('О нас','#')
-          +navItem('Чистка ковров','#')
-          +navItem('Химчистка мебели','#')
-          +navItem('Прачечная','#')
-          +navItem('Контакты','#')
+      include ../../includes/nav/nav  
+
 
 
 

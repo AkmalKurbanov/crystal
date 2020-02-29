@@ -11,21 +11,56 @@
   <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
 </head>
 <body>
+  <div class="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+  <div class="mobile-menu menu">
+    <nav class="nav">
+      <ul class="nav__wrap">
+                <li class="nav__item"> <a class="nav__link" href="#header" data-scroll>Главная</a></li>
+                <li class="nav__item"> <a class="nav__link" href="#about" data-scroll>О нас</a></li>
+                <li class="nav__item"> <a class="nav__link" href="#carpet" data-scroll>Чистка ковров</a></li>
+                <li class="nav__item"> <a class="nav__link" href="#furniture" data-scroll>Химчистка мебели</a></li>
+                <li class="nav__item"> <a class="nav__link" href="#laundry" data-scroll>Прачечная</a></li>
+                <li class="nav__item"> <a class="nav__link" href="#contacts" data-scroll>Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="sticky-header header sticky">
+    <div class="sticky__top">
+      <div class="sticky__top-wrap">
+        <div class="sticky__logo"><a href="#header" data-scroll><img src="assets/img/logo-header.svg" alt=""></a></div>
+        <div class="sticky__nav">
+          <nav class="nav">
+            <ul class="nav__wrap">
+                            <li class="nav__item"> <a class="nav__link" href="#header" data-scroll>Главная</a></li>
+                            <li class="nav__item"> <a class="nav__link" href="#about" data-scroll>О нас</a></li>
+                            <li class="nav__item"> <a class="nav__link" href="#carpet" data-scroll>Чистка ковров</a></li>
+                            <li class="nav__item"> <a class="nav__link" href="#furniture" data-scroll>Химчистка мебели</a></li>
+                            <li class="nav__item"> <a class="nav__link" href="#laundry" data-scroll>Прачечная</a></li>
+                            <li class="nav__item"> <a class="nav__link" href="#contacts" data-scroll>Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="btn-wrap">
+          <div class="btn"><span class="btn__circle"></span><a class="btn__inner" href="#contacts" data-scroll><span class="btn__container">Оставить заявку</span></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="wrapper">
     <div class="content"> 
-      <header class="header">
+      <header class="header" id="header">
         <div class="header__top">
           <div class="container">
             <div class="header__top-wrap">
-              <div class="header__top-item"><i class="fal fa-clock"></i>
+              <div class="header__top-item"><i class="icon-clock"></i>
                 <p>c 9:00 до 20:00 (без выходных и праздников)</p>
               </div>
-              <div class="header__top-item"><i class="fal fa-envelope"></i><a href="mailto:crystallux.kg@gmail.com"> crystallux.kg@gmail.com</a></div>
+              <div class="header__top-item"><i class="icon-mail"></i><a href="mailto:crystallux.kg@gmail.com"> crystallux.kg@gmail.com</a></div>
               <div class="header__top-item">
                 <div class="social">
                   <ul>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="icon-instagram"></i></a></li>
+                                        <li><a href="#" target="_blank"><i class="icon-facebook"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -40,15 +75,17 @@
               </div>
               <div class="header__masterbar-item">
                 <div class="header__contacts">
-                  <p><i class="far fa-map-marker-alt"></i>Кыргызская Респеблика, <br> г.Бишкек,пр.Чуй 147/1</p>
+                  <p><i class="icon-location"></i>Кыргызская Республика, <br> г.Бишкек,пр.Чуй 147/1</p>
                   <ul>
-                    <li><i class="fal fa-phone"></i><a href="tel:+996554110033">+996 (554) 11 00 33</a></li>
-                    <li><i class="fab fa-whatsapp"></i><a href="tel:+996504110033">+996 (504) 11 00 33</a></li>
+                    <li><i class="icon-telephone"></i><a href="tel:+996554110033">+996 (554) 11 00 33</a></li>
+                    <li><i class="icon-whatsapp"></i><a href="tel:+996504110033">+996 (504) 11 00 33</a></li>
                   </ul>
                 </div>
               </div>
               <div class="header__masterbar-item">
-                <div class="btn-wrap btn-wrap_right"> <a class="btn" href="#">Оставить заявку</a></div>
+                <div class="btn-wrap btn-wrap_right"> 
+                  <div class="btn"><span class="btn__circle"></span><a class="btn__inner" href="#contacts" data-scroll><span class="btn__container">Оставить заявку</span></a></div>
+                </div>
               </div>
             </div>
           </div>
@@ -57,12 +94,12 @@
           <div class="container">
             <nav class="nav">
               <ul class="nav__wrap">
-                                <li class="nav__item"><a class="nav__link" href="#">Главная</a></li>
-                                <li class="nav__item"><a class="nav__link" href="#">О нас</a></li>
-                                <li class="nav__item"><a class="nav__link" href="#">Чистка ковров</a></li>
-                                <li class="nav__item"><a class="nav__link" href="#">Химчистка мебели</a></li>
-                                <li class="nav__item"><a class="nav__link" href="#">Прачечная</a></li>
-                                <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                                <li class="nav__item"> <a class="nav__link" href="#header" data-scroll>Главная</a></li>
+                                <li class="nav__item"> <a class="nav__link" href="#about" data-scroll>О нас</a></li>
+                                <li class="nav__item"> <a class="nav__link" href="#carpet" data-scroll>Чистка ковров</a></li>
+                                <li class="nav__item"> <a class="nav__link" href="#furniture" data-scroll>Химчистка мебели</a></li>
+                                <li class="nav__item"> <a class="nav__link" href="#laundry" data-scroll>Прачечная</a></li>
+                                <li class="nav__item"> <a class="nav__link" href="#contacts" data-scroll>Контакты</a></li>
               </ul>
             </nav>
           </div>
@@ -88,7 +125,7 @@
           </div>
         </div>
       </div>
-      <div class="about indent">
+      <div class="about indent" id="about">
         <div class="container">
                     <h2 class="title">о нас</h2>
           <div class="about__wrap">
@@ -108,13 +145,15 @@
           </div>
         </div>
       </div>
-      <div class="services indent">
+      <div class="services indent" id="carpet">
         <div class="container" id="container">
                     <h2 class="title">Наши услуги</h2>
         </div>
         <div class="services__wrap">
-          <div class="services__img"><img src="assets/img/services/1.jpg" alt=""></div>
-          <div class="services__desc">
+          <div class="services__img-wrap">
+            <div class="services__img"><img src="assets/img/services/1.jpg" alt=""></div>
+          </div>
+          <div class="services__desc"><i class="icon-carpet"></i>
             <div class="services__content">
               <h2>Профессиональная чистка <br> ковров и ковролинов</h2>
               <p>
@@ -126,13 +165,17 @@
                 <li>Пенная чистка для свежести, яркости красок и обновления внешнего вида покрытия;</li>
                 <li>Стирка и чистка ковров на фабрике с применением профессионального оборудования.</li>
               </ul>
-              <div class="btn-wrap"><a class="btn" href="#">Оставить заявку</a></div>
+              <div class="btn-wrap">
+                <div class="btn"><span class="btn__circle"></span><a class="btn__inner" href="#contacts" data-scroll><span class="btn__container">Оставить заявку</span></a></div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="services__wrap">
-          <div class="services__img"><img src="assets/img/services/2.jpg" alt=""></div>
-          <div class="services__desc">
+        <div class="services__wrap" id="furniture">
+          <div class="services__img-wrap">
+            <div class="services__img"><img src="assets/img/services/2.jpg" alt=""></div>
+          </div>
+          <div class="services__desc"><i class="icon-sofa"></i>
             <div class="services__content">
               <h2>Профессиональная химчистка <br> мягкой мебели</h2>
               <p>Химчистка мягкой мебели еще никогда не была настолько простой, доступной и удобной! Мы профессионально, тщательно и бережно чистим – вы получаете удовольствие от результата. В ваших домашних диванах и матрасах скопилась пыль? Офисные кресла и стулья приобрели непрезентабельный вид? Доверьте нам заботу о любой мягкой мебели!</p>
@@ -144,32 +187,38 @@
                 <li>Обновлять обивку «не первой свежести», придавая ей идеальный свежий вид;</li>
                 <li>Удалять все виды пятен, следы грязных рук, чернил, пластилина, шоколада.</li>
               </ul>
-              <div class="btn-wrap"><a class="btn" href="#">Оставить заявку</a></div>
+              <div class="btn-wrap">
+                <div class="btn"><span class="btn__circle"></span><a class="btn__inner" href="#contacts" data-scroll><span class="btn__container">Оставить заявку</span></a></div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="services__wrap">
-          <div class="services__img"><img src="assets/img/services/3.jpg" alt=""></div>
-          <div class="services__desc">
+        <div class="services__wrap" id="laundry">
+          <div class="services__img-wrap">
+            <div class="services__img"><img src="assets/img/services/3.jpg" alt=""></div>
+          </div>
+          <div class="services__desc"><i class="icon-washing-machine"></i>
             <div class="services__content">
-              <h2>Профессиональная прачечная</h2>
+              <h2>Профессиональная прачечная</h2><br>
               <p>
                 Прачечный сервис – «Crystal Lux» — оказывает услуг стирки и химчистки белья корпоративным заказчикам. У нас цены на стирку белья радуют доступностью, процесс выполнения работы – минимальными сроками, а результат – высочайшим качеством. 
                 Так как мы работаем с корпоративными заказчиками, мы понимаем какая ответственность лежит на нас, поэтому даем гарантию на оказываемые услуги.
               </p>
               <p>В наши услуги входит:</p>
               <ul>
-                <li>Поддерживать в доме или офисе чистоту и следить за гигиеной;</li>
-                <li>Ухаживать за покрытиями и продлевать их срок службы;</li>
-                <li>Обновлять обивку «не первой свежести», придавая ей идеальный свежий вид;</li>
-                <li>Удалять все виды пятен, следы грязных рук, чернил, пластилина, шоколада.</li>
+                <li>Стирка и сушка белья;</li>
+                <li>Глажка;</li>
+                <li>Стирка для отелей и ресторанов;</li>
+                <li>Стирка пледов и одеял.</li>
               </ul>
-              <div class="btn-wrap"><a class="btn" href="#">Оставить заявку</a></div>
+              <div class="btn-wrap">
+                <div class="btn"><span class="btn__circle"></span><a class="btn__inner" href="#contacts" data-scroll><span class="btn__container">Оставить заявку</span></a></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="advantages indent" style="background-image: url('assets/img/advantage/1.jpg');">
+      <div class="advantages indent"><span style="background-image: url('assets/img/advantage/1.jpg');"></span>
         <div class="container">
           <div class="advantages__wrap">
             <div class="advantages__desc">
@@ -183,27 +232,27 @@
               </ul>
               <div class="advantages__illustration">
                                 <div class="advantages__illustration-item">
-                                  <div class="advantages__illustration-icon"><i></i></div>
+                                  <div class="advantages__illustration-icon"><i class="icon-1"></i></div>
                                   <div class="advantages__illustration-desc">Профессиональное <br/> оборудование</div>
                                 </div>
                                 <div class="advantages__illustration-item">
-                                  <div class="advantages__illustration-icon"><i></i></div>
+                                  <div class="advantages__illustration-icon"><i class="icon-2"></i></div>
                                   <div class="advantages__illustration-desc">Справедливые <br/> цены</div>
                                 </div>
                                 <div class="advantages__illustration-item">
-                                  <div class="advantages__illustration-icon"><i></i></div>
+                                  <div class="advantages__illustration-icon"><i class="icon-3"></i></div>
                                   <div class="advantages__illustration-desc">Гарантия <br/> качества</div>
                                 </div>
                                 <div class="advantages__illustration-item">
-                                  <div class="advantages__illustration-icon"><i></i></div>
+                                  <div class="advantages__illustration-icon"><i class="icon-4"></i></div>
                                   <div class="advantages__illustration-desc">Оплата <br/> по факту</div>
                                 </div>
                                 <div class="advantages__illustration-item">
-                                  <div class="advantages__illustration-icon"><i></i></div>
+                                  <div class="advantages__illustration-icon"><i class="icon-5"></i></div>
                                   <div class="advantages__illustration-desc">Безопасная <br/> химия</div>
                                 </div>
                                 <div class="advantages__illustration-item">
-                                  <div class="advantages__illustration-icon"><i></i></div>
+                                  <div class="advantages__illustration-icon"><i class="icon-6"></i></div>
                                   <div class="advantages__illustration-desc">Без выходных</div>
                                 </div>
               </div>
@@ -211,7 +260,7 @@
           </div>
         </div>
       </div>
-      <div class="delivery indent">
+      <div class="delivery indent" style="background-image: url('assets/img/delivery/1.jpg');">
         <div class="container">
                     <h2 class="title">Доставка</h2>
           <div class="delivery__wrap">
@@ -221,7 +270,11 @@
                 <p>У нас есть вывоз и обратная доставка, все заботы и хлопоты мы берем на себя.  Менеджеры по работе с клиентами всегда на рабочем месте!</p>
                 <p>Просто закажите Crystal Lux на дом или в офис, и машина приедет точно в срок. Это так же просто как заказать такси или доставку пиццы.</p>
               </div>
-              <div class="btn-wrap"><a class="btn" href="#">Оставить заявку</a></div>
+              <div class="btn-wrap">
+                <includes/>
+                <btn/>
+                <btn></btn>
+              </div>
             </div>
             <div class="delivery__item"><img src="assets/img/delivery/2.png" alt=""></div>
           </div>
@@ -288,7 +341,7 @@
           </div>
         </div>
       </div>
-      <div class="contacts indent">
+      <div class="contacts indent" id="contacts">
         <div class="container">
                     <h2 class="title">Контакты</h2>
         </div>
@@ -301,13 +354,15 @@
                     <input type="text" name="Иия" placeholder="Иия">
                   </div>
                   <div class="form__input">
-                    <input type="text" name="Номер телефона" placeholder="Номер телефона">
+                    <input class="phone-js" type="text" name="Номер телефона" placeholder="Номер телефона">
                   </div>
                   <div class="form__input form__input_textarea">
                     <textarea name="Cообщение" placeholder="Ваше сообщение"></textarea>
                   </div>
                   <div class="btn-wrap btn-wrap_block">
-                    <button class="btn" type="submit">Отправить</button>
+                    <div class="btn"><span class="btn__circle"></span>
+                      <button class="btn__inner" type="submit"><span class="btn__container">Отправить</span></button>
+                    </div>
                   </div>
                 </form>
               </div>
@@ -325,23 +380,21 @@
         <div class="container">
           <div class="footer__masterbar-wrap">
             <div class="footer__masterbar-item">
-              <p><i class="far fa-map-marker-alt"></i>Кыргызская Респеблика, <br>
+              <p><i class="icon-location"></i>Кыргызская Республика, <br>
                 г.Бишкек,пр.Чуй 147/1
               </p>
               <div class="social">
                 <ul>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="icon-instagram"></i></a></li>
+                                    <li><a href="#" target="_blank"><i class="icon-facebook"></i></a></li>
                 </ul>
               </div>
             </div>
-            <div class="footer__masterbar-item">
-              <div class="footer__logo"><a href="#"><img src="assets/img/logo-footer.svg"></a></div>
-            </div>
-            <div class="footer__masterbar-item"><a href="mailto:crystallux.kg@gmail.com"><i class="fal-fa-envelope"></i>crystallux.kg@gmail.com</a>
+            <div class="footer__masterbar-item"><a class="footer__logo" href="#header" data-scroll><img src="assets/img/logo-footer.svg"></a></div>
+            <div class="footer__masterbar-item"><a href="mailto:crystallux.kg@gmail.com"><i class="icon-mail"></i>crystallux.kg@gmail.com</a>
               <ul>
-                <li><i class="fa fa-phone"></i><a href="tel:+996554110033">+996 (554) 11 00 33</a></li>
-                <li><i class="fab fa-whatsapp"></i><a href="tel:+996504110033">+996 (504) 11 00 33</a></li>
+                <li><i class="icon-telephone"></i><a href="tel:+996554110033">+996 (554) 11 00 33</a></li>
+                <li><i class="icon-whatsapp"></i><a href="tel:+996504110033">+996 (504) 11 00 33</a></li>
               </ul>
             </div>
           </div>

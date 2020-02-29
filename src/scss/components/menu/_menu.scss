@@ -1,0 +1,53 @@
+.menu {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $wc;
+  z-index: 9;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: $tr;
+
+  .nav {
+    display: block;
+
+    &__wrap {
+      flex-direction: column;
+    }
+
+    &__item {
+      border: none;
+      margin-bottom: rem(10px);
+      transition: $tr;
+
+      &:hover {
+        transform: translateX(10px);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__link {
+      color: $bc;
+      padding: 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+
+}
+
+.menu-open {
+  transform: translateY(0);
+  opacity: 1;
+}

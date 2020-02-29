@@ -94,22 +94,12 @@ textarea {
 
 // // container end
 
-// // logo
-// .logo {
+// body-scroll
+.body-scroll {
+  overflow: hidden;
+}
 
-
-//   a {
-//     display: flex;
-//   }
-
-//   svg,
-//   img {
-//     width: 100%;
-//     max-width: 100%;
-//   }
-// }
-
-// // logo end
+// body-scroll end
 
 // // social
 .social {
@@ -119,6 +109,10 @@ textarea {
 
     li {
       margin-right: rem(30px);
+
+      @include md {
+        margin-right: rem(15px);
+      }
 
       &:last-child {
         margin-right: 0;
@@ -153,18 +147,7 @@ textarea {
 
 // // btn
 .btn-wrap {
-  .btn {
-    color: $wc;
-    background-color: $mc;
-    font-size: rem(20px);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: rem(9px);
-    padding: rem(11px) rem(17px);
-    cursor: pointer;
-    transition: $tr;
-  }
+  display: flex;
 
   &_left {
     text-align: left;
@@ -183,8 +166,94 @@ textarea {
       display: flex;
       width: 100%;
       text-transform: uppercase;
+
+    }
+
+    .btn__inner {
+      width: 100%;
     }
   }
+
+
+
+  .btn {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    border-radius: rem(10px);
+
+    &__circle {
+      border-radius: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      margin-left: 0px;
+      margin-top: 0px;
+      pointer-events: none;
+    }
+
+    &__inner {
+      background-color: $mc;
+      color: $wc;
+      font-size: rem(20px);
+      transition: 400ms;
+      padding: rem(11px) rem(17px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__container {
+      position: relative;
+    }
+  }
+
+  .explode-circle {
+    animation: explode 0.5s forwards;
+  }
+
+  .desplode-circle {
+    animation: desplode 0.5s forwards;
+  }
+
+  @keyframes explode {
+    0% {
+      width: 0px;
+      height: 0px;
+      margin-left: 0px;
+      margin-top: 0px;
+      background-color: rgba(42, 53, 80, 0.2);
+    }
+
+    100% {
+      width: 800px;
+      height: 800px;
+      margin-left: -200px;
+      margin-top: -200px;
+      background-color: $sc;
+    }
+  }
+
+  @keyframes desplode {
+    0% {
+      width: 400px;
+      height: 400px;
+      margin-left: -200px;
+      margin-top: -200px;
+      background-color: $sc;
+    }
+
+    100% {
+      width: 0px;
+      height: 0px;
+      margin-left: 0px;
+      margin-top: 0px;
+      background-color: rgba(129, 80, 108, 0.6);
+    }
+  }
+
 }
 
 // btn end
@@ -200,6 +269,26 @@ textarea {
   color: $bc;
   font-weight: 400;
 
+  @include lg {
+    margin-bottom: rem(45px);
+    font-size: rem(38px);
+  }
+
+  @include md {
+    margin-bottom: rem(40px);
+    font-size: rem(33px);
+  }
+
+  @include sm {
+    margin-bottom: rem(35px);
+    font-size: rem(27px);
+  }
+
+  @include xs {
+    margin-bottom: rem(30px);
+    font-size: rem(23px);
+  }
+
   &:before {
     position: absolute;
     content: '';
@@ -214,6 +303,22 @@ textarea {
 
 .indent {
   padding: rem(50px) 0;
+
+  @include lg {
+    padding: rem(45px) 0;
+  }
+
+  @include md {
+    padding: rem(40px) 0;
+  }
+
+  @include sm {
+    padding: rem(35px) 0;
+  }
+
+  @include xs {
+    padding: rem(30px) 0;
+  }
 }
 
 

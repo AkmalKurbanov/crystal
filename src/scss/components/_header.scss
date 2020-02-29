@@ -8,24 +8,45 @@
     i {
       color: $wc;
       margin: 0;
+
+      @include md {
+        font-size: rem(14px);
+      }
+
+      @include sm {
+        font-size: rem(13px);
+      }
     }
 
     i {
       margin-right: rem(20px);
+
+      @include md {
+        margin-right: rem(10px);
+      }
+
+      @include sm {
+        margin-right: rem(7px);
+      }
     }
 
     a {
-
       &:hover {
         color: $sc;
       }
     }
+
   }
 
   &__top-wrap {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+
+    @include xs {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__top-item {
@@ -36,16 +57,45 @@
     align-items: center;
     justify-content: center;
 
+
+    &:first-child {
+      @include sm {
+        padding-left: 0;
+      }
+    }
+
+    @include md {
+      padding: rem(3px) rem(15px);
+    }
+
+    @include sm {
+      padding: rem(2px) rem(10px);
+    }
+
+    @include xs {
+      padding: 0;
+      margin-bottom: rem(7px);
+      border: none;
+    }
+
+
+
     &:last-child {
       border: none;
       padding-right: 0;
-
+      margin: 0;
     }
   }
 
   &__masterbar {
     padding: rem(13px) 0 0;
     margin-bottom: rem(25px);
+    position: relative;
+
+    @include sm {
+      margin-bottom: 0;
+      padding: rem(13px) 0;
+    }
   }
 
   &__masterbar-wrap {
@@ -54,11 +104,43 @@
     align-items: flex-end;
     justify-content: space-between;
 
+    @include md {
+      align-items: center;
+    }
+
+    @include sm {
+      justify-content: space-around;
+    }
+
+    @include xs {
+      flex-direction: column;
+    }
   }
+
+  &__masterbar-item {
+    display: flex;
+
+    &:nth-child(2) {
+      @include sm {
+        position: absolute;
+        display: none;
+      }
+    }
+  }
+
+
 
   &__logo {
     max-width: rem(240px);
     width: 100%;
+
+    @include lg {
+      max-width: rem(150px);
+    }
+
+    @include xs {
+      margin-bottom: rem(20px);
+    }
   }
 
   &__contacts {
@@ -66,6 +148,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @include md {
+      flex-direction: column;
+      align-items: start;
+    }
 
     * {
       color: $bc;
@@ -82,6 +169,16 @@
       position: relative;
       display: flex;
       align-items: center;
+      line-height: 1.5;
+
+      @include lg {
+        margin-right: rem(30px);
+      }
+
+      @include md {
+        margin-right: 0;
+        margin-bottom: rem(10px);
+      }
 
       i {
         color: $mc;
@@ -94,6 +191,7 @@
         position: relative;
         display: flex;
         align-items: center;
+        line-height: 1.5;
 
         i {
           color: #2dd248;
@@ -107,47 +205,152 @@
       }
     }
   }
+}
 
-  .nav {
-    padding-bottom: rem(13px);
-    &__wrap {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+.nav {
+  padding-bottom: rem(13px);
+
+  @include sm {
+    display: none;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include lg {
+      justify-content: center;
     }
 
-    &__item {
-      border-right: rem(1px) solid $mc;
+  }
+
+  &__item {
+    border-right: rem(1px) solid $mc;
+
+
+
+    a {
+      display: flex;
+
+      &:hover {
+        color: $sc;
+      }
+    }
+
+    &:first-child {
 
       a {
-        display: flex;
-
-        &:hover {
-          color: $sc;
-        }
+        padding-left: 0;
       }
-
-      &:first-child {
-
-        a {
-          padding-left: 0;
-        }
-      }
-
-      &:last-child {
-        border: none;
-
-        a {
-          padding-right: 0;
-        }
-      }
-
     }
 
-    &__link {
-      font-size: rem(20px);
-      color: $bc;
-      padding: 0 rem(40px);
+    &:last-child {
+      border: none;
+
+      a {
+        padding-right: 0;
+      }
+    }
+
+  }
+
+  &__link {
+    font-size: rem(20px);
+    color: $bc;
+    padding: 0 rem(40px);
+    text-align: center;
+
+    @include lg {
+      padding: 0 rem(30px);
+      font-size: rem(18px);
+    }
+
+    @include md {
+      padding: 0 rem(15px);
+      font-size: rem(16px);
     }
   }
+}
+
+.sticky {
+  z-index: 9;
+  position: fixed;
+  width: 100%;
+  transition: $tr;
+  background-color: $wc;
+  padding: rem(10px) 0;
+  box-shadow: 0 3px 34px 0 rgba(0, 0, 0, .47);
+  box-sizing: border-box;
+  transform: translateY(-200%);
+
+  @include sm {
+    display: none;
+  }
+
+  &__top {
+    .btn__inner {
+      padding: rem(7px) rem(20px);
+
+      @include lg {
+        padding: rem(5px) rem(10px);
+        font-size: rem(14px);
+      }
+    }
+  }
+
+  &__top-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    @include sm {
+      justify-content: center;
+    }
+
+    @include xs {
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    max-width: rem(110px);
+    width: 100%;
+
+    @include md {
+      display: none;
+    }
+
+    @include sm {
+      margin-right: rem(30px);
+      display: block;
+    }
+
+    @include xs {
+      max-width: rem(80px);
+      margin: auto;
+      margin-bottom: rem(20px);
+    }
+  }
+
+  .nav {
+    padding: 0;
+
+    .nav__link {
+      padding: 0 rem(10px);
+
+      @include lg {
+        font-size: rem(15px);
+        padding: 0 rem(5px);
+      }
+
+      @include md {
+        font-size: rem(13px);
+      }
+    }
+  }
+
+
 }

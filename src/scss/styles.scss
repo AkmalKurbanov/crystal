@@ -15,9 +15,7 @@
 // подключение сгенерированных иконок(fontello),
 // FontAwesome
 
-// @import "../assets/icons/fontello/css/icon.css";
-@import "../assets/icons/fontawesome5/css/all.min.css";
-
+@import "../assets/icons/fontello/fontello";
 //---------------------------------------------
 
 // подключение css файлов
@@ -37,6 +35,7 @@
 @import "components/base";
 @import "components/header";
 @import "components/hamburger/hamburger";
+@import "components/menu/menu";
 @import "components/preloader/preloader";
 @import "components/entry/entry";
 @import "components/about/about";

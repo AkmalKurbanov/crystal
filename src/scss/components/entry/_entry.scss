@@ -7,6 +7,18 @@
     background-position: right;
     display: flex;
     align-items: center;
+
+    @include lg {
+      min-height: rem(500px);
+    }
+
+    @include md {
+      min-height: rem(400px);
+    }
+
+    @include sm {
+      min-height: rem(300px);
+    }
   }
 
   &__caption {
@@ -14,6 +26,18 @@
     font-weight: 500;
     color: $wc;
     text-transform: uppercase;
+
+    @include lg {
+      font-size: rem(40px);
+    }
+
+    @include md {
+      font-size: rem(30px);
+    }
+
+    @include sm {
+      font-size: rem(20px);
+    }
 
     &_lighter {
       color: $mc;

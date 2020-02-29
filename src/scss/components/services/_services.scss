@@ -5,6 +5,17 @@
     align-items: center;
     margin-bottom: rem(40px);
 
+    @include md {
+      align-items: flex-start;
+    }
+
+    @include xs {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 rem(10px);
+      margin-bottom: rem(30px);
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -13,18 +24,82 @@
       flex-direction: row-reverse;
       margin-left: 0;
 
-      .services__img {
-        margin-left: rem(-100px);
+      @include xs {
+        flex-direction: column;
       }
 
       .services__desc {
         padding-right: rem(130px);
+
+        @include md {
+          padding-right: rem(100px);
+        }
+
+        @include xs {
+          padding: rem(15px);
+        }
+
+        i {
+          position: absolute;
+          left: 0;
+          font-size: rem(270px);
+          opacity: 0.1;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
       }
 
       .services__content {
         max-width: 100%;
+        width: 100%;
+      }
+
+      .services__img-wrap {
+        margin-left: rem(-100px);
+        margin-right: 0;
+
+        @include md {
+          margin-left: rem(-80px);
+          margin-top: rem(-30px);
+        }
+
+        @include xs {
+          margin: 0;
+          margin-bottom: rem(30px);
+        }
       }
     }
+  }
+
+  &__img-wrap {
+    position: relative;
+    max-width: rem(457px);
+    width: 100%;
+    min-height: rem(480px);
+    margin-right: rem(-100px);
+
+    @include lg {
+      max-width: rem(357px);
+      min-height: rem(380px);
+    }
+
+    @include md {
+      margin-right: rem(-80px);
+      max-width: rem(300px);
+    }
+
+    @include sm {
+      max-width: rem(200px);
+    }
+
+    @include xs {
+      min-height: auto;
+      max-width: rem(357px);
+      margin: 0;
+      margin-bottom: rem(30px);
+    }
+
   }
 
   &__img {
@@ -33,9 +108,14 @@
     box-shadow: 0px 6px 19.5px 1.5px rgba(0, 0, 0, 0.66);
     border-radius: rem(20px);
     overflow: hidden;
-    margin-right: rem(-100px);
     z-index: 1;
     display: flex;
+    position: absolute;
+    top: 0;
+
+    @include xs {
+      position: relative;
+    }
   }
 
   &__desc {
@@ -43,17 +123,60 @@
     border-radius: rem(20px);
     background-color: #f7f7f7;
     width: 100%;
+    position: relative;
+
+    @include md {
+      padding: rem(25px) rem(15px) rem(25px) rem(100px);
+    }
+
+    @include sm {
+      padding: rem(25px) rem(15px) rem(25px) rem(90px);
+    }
+
+    @include xs {
+      padding: rem(15px);
+      width: auto;
+    }
+
+    i {
+      position: absolute;
+      right: 0;
+      font-size: rem(150px);
+      opacity: 0.1;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &.icon-carpet {
+        right: rem(190px);
+      }
+
+      &.icon-washing-machine {
+        font-size: rem(300px);
+      }
+
+      @include xs {
+        display: none;
+      }
+    }
 
     h2 {
-      font-size: 25px;
+      font-size: rem(25px);
       font-weight: 500;
       color: $bc;
       margin-bottom: rem(15px);
+
+      @include sm {
+        font-size: rem(20px);
+      }
     }
 
     p {
       margin-bottom: rem(15px);
       line-height: 1.25;
+
+      @include md {
+        font-size: rem(15px);
+      }
     }
 
     ul {
@@ -66,6 +189,10 @@
         display: flex;
         align-items: center;
         margin-bottom: rem(25px);
+
+        @include md {
+          margin-bottom: rem(20px);
+        }
 
         &:before {
           position: absolute;
@@ -91,5 +218,9 @@
   &__content {
     width: 100%;
     max-width: 65%;
+
+    @include lg {
+      max-width: 100%;
+    }
   }
 }

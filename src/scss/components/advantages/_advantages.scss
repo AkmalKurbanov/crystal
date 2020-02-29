@@ -1,9 +1,43 @@
 .advantages {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left top;
+  position: relative;
   padding-top: rem(300px);
-  background-attachment: fixed;
+
+  @include sm {
+    padding-top: rem(100px);
+  }
+
+  @include xs {
+    padding-top: rem(30px);
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    background-color: rgba($bc, 0.4);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+
+    @include md {
+      display: block;
+    }
+  }
+
+  span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-image: url('../../../assets/img/advantage/1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    // background-color: #fafafa;
+  }
 
   &__wrap {
     display: flex;
@@ -12,9 +46,31 @@
 
   &__desc {
     flex-basis: 55%;
+    position: relative;
+    z-index: 1;
+
+    @include md {
+      color: $wc;
+    }
+
+    @include sm {
+      flex-basis: 100%;
+    }
 
     i {
       font-family: icon;
+
+      @include md {
+        color: $wc;
+      }
+
+    }
+
+    .title {
+      @include md {
+        color: $wc;
+      }
+
     }
   }
 
@@ -50,6 +106,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    @include xs {
+      flex-direction: column;
+    }
   }
 
   &__illustration-item {
@@ -59,9 +119,17 @@
     flex-direction: row;
     align-items: center;
 
+    @include xs {
+      margin-top: rem(15px);
+    }
+
     &:nth-child(1),
     &:nth-child(2) {
       margin-top: 0;
+
+      @include xs {
+        margin-top: rem(15px);
+      }
     }
   }
 
@@ -76,6 +144,11 @@
     font-weight: 500;
     line-height: 1.57;
     color: $bc;
+
+    @include md {
+      color: $wc;
+    }
+
   }
 
 }

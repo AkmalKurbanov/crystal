@@ -2,15 +2,15 @@
 
   DG.then(function () {
     map = DG.map('map', {
-      center: [42.875923, 74.619700],
+      center: [42.911610, 74.612846],
       zoom: 17
     });
     var myIcon = L.icon({
-      iconUrl: 'assets/img/mark.png',
-      iconSize: [55, 80],
+      iconUrl: 'assets/img/marker.svg',
+      iconSize: [55, 74],
     });
-    DG.marker([42.87600, 74.619700], {
+    DG.marker([42.911610, 74.612846], {
       icon: myIcon
-    }).addTo(map).bindPopup('г.Бишкек,пр.Чуй 147/1');
+    }).addTo(map).bindPopup('г.Бишкек, ул. 155');
 
   });

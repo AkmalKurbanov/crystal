@@ -31,8 +31,12 @@
   &__item {
     background-color: #e4f5f4;
     border-radius: rem(10px);
-    padding: rem(80px) rem(30px) rem(30px) rem(40px);
+    padding: rem(80px) rem(30px) rem(30px) rem(30px);
     text-align: center;
+
+    @include xs {
+      padding: rem(80px) rem(10px) rem(30px) rem(10px);
+    }
   }
 
   &__img {
