@@ -47,3 +47,8 @@ $('.menu .nav__link').on('click', function () {
   $('.menu').removeClass('menu-open');
   $('.hamburger').removeClass('is-active');
 });
+
+
+
+  $('.sticky__nav .nav__item').removeAttr('data-wow-duration , data-wow-delay');
+  $('.sticky__nav .nav__item').removeClass('wow fadeInDown');
